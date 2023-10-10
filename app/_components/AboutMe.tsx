@@ -6,7 +6,7 @@ const AboutMe = () => {
     <div className="grid grid-cols-12 grid-rows-6">
       <div className="col-start-1 col-span-8 row-span-4 row-start-1">
         <h3 className="text-4xl font-bold mb-10">About me</h3>
-        <div className="flex flex-col gap-6 p-4 border border-slate-100 bg-white/30 backdrop-blur-lg drop-shadow-3xl rounded-2xl">
+        <div className="flex flex-col gap-6 p-4 border border-slate-100 bg-white/30 backdrop-blur-lg drop-shadow-5xl rounded-2xl">
           <h2 className="text-3xl font-semibold">Who is Talibé?</h2>
           <p className="text-base col-span-6">
             Hello! I'm Talibé Balde, a 30-year-old web developer from France.
