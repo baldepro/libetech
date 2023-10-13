@@ -13,7 +13,7 @@ const NavBar = () => {
             <NavigationMenu>
                 <NavigationMenuList className="gap-3">
                     <NavigationMenuItem>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#about-me" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle({
                                 className: "bg-transparent hover:bg-white"
                             })}>
@@ -22,7 +22,7 @@ const NavBar = () => {
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="#projects" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle({
                                 className: "bg-transparent hover:bg-white"
                             })}>
@@ -31,7 +31,7 @@ const NavBar = () => {
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="/docs" legacyBehavior passHref>
+                        <Link href="https://linkedin.com/in/talib%C3%A9-balde-b71640134"  target="_blank" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle({
                                 className: "bg-primary text-primary-foreground hover:bg-primary/90 hover:text-fuchsia-50"
                             })}>

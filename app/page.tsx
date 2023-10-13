@@ -7,6 +7,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import Project, { ProjectData } from './_components/projects/Project'
 import OpenSourceProjects from './_components/projects/OpenSourceProjects'
 import ProfessionalProjects from './_components/projects/ProfessionalProjects'
+import Footer from './_components/Footer'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -23,9 +25,11 @@ export default function Home() {
               <h2 className='text-3xl font-semibold'> a passionate web developer</h2>
             </div>
             <div className='flex gap-4 mb-12'>
-              <Button className='gap-2' type='button'>
-                <Download size={16}/>
-                Download my resume
+              <Button className='gap-2' asChild>
+                <Link href="/talibe-balde.pdf">
+                    <Download size={16}/>
+                    Download my resume
+                </Link>
               </Button>
               <Button className='gap-2' type='button' variant={'secondary'}>
                 <MessageSquare size={16}/>
@@ -36,7 +40,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className='container text-center py-8'>
+      <div className='container text-center py-8' id='projects'>
         <h2 className='text-3xl font-bold'>My projects</h2>
         <div className='m-8'>
           <Tabs defaultValue="Open Source" className="text-left">
@@ -55,6 +59,7 @@ export default function Home() {
           </Tabs>
         </div>
       </div>
+      <Footer/>
     </>
   )
 }

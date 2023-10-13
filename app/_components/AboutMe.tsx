@@ -3,7 +3,7 @@ import talibeJpg from "public/talibe.jpg";
 
 const AboutMe = () => {
   return (
-    <div className="grid grid-cols-12 grid-rows-6">
+    <div className="grid grid-cols-12 grid-rows-6" id="about-me">
       <div className="col-start-1 col-span-8 row-span-4 row-start-1">
         <h3 className="text-4xl font-bold mb-10">About me</h3>
         <div className="flex flex-col gap-6 p-4 border border-slate-100 bg-white/30 backdrop-blur-lg drop-shadow-5xl rounded-2xl">
