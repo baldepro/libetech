@@ -9,13 +9,13 @@ const AboutMe = () => {
         <div className="flex flex-col gap-6 p-4 border border-slate-100 bg-white/30 backdrop-blur-lg drop-shadow-5xl rounded-2xl">
           <h2 className="text-3xl font-semibold">Who is Talibé?</h2>
           <p className="text-base col-span-6">
-            Hello! I'm Talibé Balde, a 30-year-old web developer from France.
+            Hello! I&apos;m Talibé Balde, a 30-year-old web developer from France.
             I work as a freelancer and currently collaborate with the Ministry of Interior.
-            I'm passionate about web development and enjoy learning new things.
-            I'm a curious person who loves exploring new technologies.
+            I&apos;m passionate about web development and enjoy learning new things.
+            I&apos;m a curious person who loves exploring new technologies.
             Football is another passion of mine. I enjoy watching and playing it with friends.
             My favorites teams are Liverpool and Real Madrid.
-            I'm a social person who enjoys meeting new people.
+            I&apos;m a social person who enjoys meeting new people.
           </p>
         </div>
       </div>
