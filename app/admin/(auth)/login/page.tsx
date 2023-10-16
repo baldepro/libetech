@@ -27,7 +27,7 @@ const LoginPage = () => {
             setIsLoading(true)
             await signInUser(data.email, data.password)
             router.push('/admin')
-        } catch (error) {
+        } catch (error: any) {
             toast.error(error.message)
         } finally {
             setIsLoading(false)
