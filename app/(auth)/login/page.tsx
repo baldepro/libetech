@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { useForm } from "react-hook-form"
 import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
+import { ZodType, z } from 'zod'
 import { Input } from "@/components/ui/input"
 import { Form, FormItem, FormLabel, FormControl, FormMessage, FormField } from "@/components/ui/form"
 import { LogIn } from "lucide-react"
@@ -16,11 +16,12 @@ import { useRouter } from "next-nprogress-bar"
 const LoginPage = () => {
     const [isLoading, setIsLoading] = useState(false)
     const router = useRouter()
-    const loginFormSchema = z.object({
+    const loginFormSchema: ZodType<{ email: string; password: string; }> = z.object({
         email: z.string().email('Invalid email address'),
         password: z.string().min(8),
-    })
+    });
     type LoginFormValues = z.infer<typeof loginFormSchema>
+    //@ts-ignore
     const form = useForm<LoginFormValues>({resolver: zodResolver(loginFormSchema)})
     const handleSubmit = async (data: LoginFormValues) => {
         try {
