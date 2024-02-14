@@ -5,13 +5,13 @@ import Link from "next/link"
 
 const NavBar = () => {
     return(
-        <nav className="flex justify-between items-center p-4 border border-slate-100 bg-white/30 backdrop-blur-lg drop-shadow-sm rounded-2xl">
-            <Link href={"/"} className="text-3xl font-semibold flex flex-row justify-between">
+        <nav className="md:flex md:justify-between items-center p-6 border border-slate-400 bg-white/70 backdrop-blur-sm rounded-2xl">
+            <Link href={"/"} className="flex text-3xl font-semibold">
                 <Layers size={32}/>
-                <span className="pl-3">LibéTech</span>
+                <span className="pl-3">Talibé BALDE</span>
             </Link>
-            <NavigationMenu>
-                <NavigationMenuList className="gap-3">
+            <NavigationMenu className="px-4">
+                <NavigationMenuList className="flex flex-col md:flex-row gap-3 mt-2 items-start text-start">
                     <NavigationMenuItem>
                         <Link href="#about-me" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle({

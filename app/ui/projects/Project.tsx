@@ -25,13 +25,16 @@ interface ProjectProps {
 }
 const Project = ({ project }: ProjectProps) => {
   return (
-    <div>
-      <Card className="rounded-2xl">
+    <Card className="border rounded-2xl bg-white/80">
         <CardHeader>
           <CardTitle>{project.title}</CardTitle>
-          <CardDescription>{project.description}</CardDescription>
-          <div className="flex gap-3">
-            {project.status === 'under-development' && <Badge variant={"secondary"}>under development</Badge>}
+          <CardDescription className='text-base pt-2'>
+            <p className=' whitespace-normal'>
+              {project.description}
+            </p>
+          </CardDescription>
+          <div className="flex flex-col md:flex-row gap-4 pt-4">
+            {project.status === 'under-development' && <Badge variant={'default'}>under development</Badge>}
             {project.status === 'archived' && <Badge variant={"outline"}>archived</Badge>}
             {project.status === 'released' && <Badge variant={"default"}>released</Badge>}
             <Badge className="flex items-center gap-2" variant={"secondary"}>
@@ -41,15 +44,16 @@ const Project = ({ project }: ProjectProps) => {
           </div>
         </CardHeader>
         <CardContent>
-          <div className="flex items-center gap-4 my-4" >
-              {project.technologies.map((tech) => (
-                <div key={tech.title}>
-                  <Image src={tech.photo_url} alt={tech.title} title ={tech.title} width={60} height={60} className="rounded-sm"/>
-                </div>
-              ))}
+          <div className="flex flex-col gap-4 my-4" >
+              <h3 className='text-lg mb-2'>Technologies</h3>
+              <div className='grid grid-flow-row-dense grid-cols-3 gap-2 mb-4'>
+                {project.technologies.map((tech) => (
+                    <Image key={tech.title}  src={tech.photo_url} alt={tech.title} title ={tech.title} width={60} height={60} className="rounded-sm"/>
+                ))}
+              </div>
           </div>
         </CardContent>
-        <CardFooter className="gap-3 justify-end">
+        <CardFooter className="flex flex-col md:flex-row gap-3 justify-end">
           <Button variant={"destructive"} asChild className="gap-2 items-center">
             <Link href={project.github_url}>
                 View on Github
@@ -64,7 +68,6 @@ const Project = ({ project }: ProjectProps) => {
           </Button>}
         </CardFooter>
       </Card>
-    </div>
   );
 };
 

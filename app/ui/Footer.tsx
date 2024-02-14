@@ -8,8 +8,8 @@ const Footer = () => {
     return (
         <div className="container mx-auto px-8 py-8">
             <Separator />
-            <div className="grid grid-cols-12 pt-8 mb-8">
-                <div className="col-start-1 col-span-6 flex flex-col justify-between items-start">
+            <div className="flex flex-col items-center gap-4 md:grid md:grid-cols-12 pt-8 mb-8">
+                <div className="md:col-start-1 md:col-span-6 flex flex-col md:justify-between md:items-start">
                     <Link
                         className="flex items-center gap-3"
                         href="/"
@@ -21,14 +21,8 @@ const Footer = () => {
                             <span className="text-sm">Made with ❤️ by Talibé BALDE</span>
                         </span>
                     </Link>
-                    <Button
-                        variant="link"
-                        asChild
-                    >
-                        <Link href="/legal-notice"> Legal Notice </Link>
-                    </Button>
                 </div>
-                <div className="col-start-7 col-span-3">
+                <div className="md:col-start-7 md:col-span-3">
                     <nav>
                         <ul>
                             <li className="font-semibold my-2">
@@ -44,15 +38,15 @@ const Footer = () => {
                         </ul>
                     </nav>
                 </div>
-                <div className="col-start-10 col-span-3 flex justify-end">
+                <div className="md:col-start-10 md:col-span-3 flex md:justify-end">
                     <nav>
                         <ul>
-                        <li className="font-semibold my-2">
+                        <li className="font-bold md:my-2">
                                 <Button variant="link" asChild>
                                     <Link href="https://github.com/baldepro/" target="_blank" rel="noreferrer">GitHub</Link>
                                 </Button>
                             </li>
-                            <li className="font-semibold my-2">
+                            <li className="font-bold md:my-2">
                                 <Button variant="link" asChild>
                                     <Link href="https://www.linkedin.com/in/talib%C3%A9-balde-b71640134/" target="_blank" rel="noreferrer">LinkedIn</Link>
                                 </Button>

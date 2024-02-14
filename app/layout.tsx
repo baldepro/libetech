@@ -1,13 +1,13 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import { Provider } from './_components/Provider'
+import { Provider } from './ui/Provider'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Libetech App',
-  description: 'Application Libetech company',
+  title: 'Talibé BALDE',
+  description: 'Application web portfolio de Talibé BALDE',
 }
 
 export default function RootLayout({
