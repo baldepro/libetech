@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "BALDE",
+        "baldepro",
         "clsx",
         "hookform",
         "informations",
@@ -17,5 +18,6 @@
         "Supabase",
         "tailwindcss",
         "Talibé"
-    ]
+    ],
+    "WillLuke.nextjs.hasPrompted": true
 }

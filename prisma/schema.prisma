@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  email         String   @unique
+  image         String?
+  biography     String?
+  password      String
+}
+
+enum ProjectStatus {
+  DEVELOPPEMENT
+  QUALIFICATION
+  PRODUCTION
+}
+
+model Technology {
+  id              String    @id @default(cuid())
+  name            String @db.VarChar(255)
+  icone_url       String? @db.VarChar(255)
+  website_url     String? @db.VarChar(255)
+  projects        Project []
+  experiences     Experience []
+}
+
+model Project {
+  id              String    @id @default(cuid())
+  name            String @db.VarChar(255)
+  description     String @db.VarChar(255)
+  type            String @db.VarChar(255)
+  status          ProjectStatus
+  github_url      String? @db.VarChar(255)
+  website_url     String? @db.VarChar(255)
+  technologies    Technology []
+}
+
+model Experience {
+  id              String    @id @default(cuid())
+  title           String @db.VarChar(255)
+  description     String @db.VarChar(255)
+  type            String @db.VarChar(255)
+  client          String @db.VarChar(255)
+  technologies    Technology []
+}
+
+model Formation {
+  id              String    @id @default(cuid())
+  title           String @db.VarChar(255)
+  description     String @db.VarChar(255)
+  startDate       DateTime?
+  endDate         DateTime?
+  school          String @db.VarChar(255)
+}
+
+model Hobby {
+  id              String    @id @default(cuid())
+  name            String @db.VarChar(255)
+}
